@@ -1,0 +1,7 @@
+<resources>
+    <string name="menu_settings">Settings</string>
+    <string name="newest_published">Newest</string>
+    <string name="oldest_published">Oldest</string>
+    <string name="titles_ascending">Ascending</string>
+    <string name="titles_descending">Descending</string>
+</resources>

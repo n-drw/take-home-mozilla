@@ -1,0 +1,58 @@
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.pocket.homework.ListViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsFragment">
+
+    <RadioGroup
+        android:id="@+id/sortGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:itemFilter="@={viewModel.selectedOrder}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/sortTitleAsc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titles_ascending"
+            android:textSize="24sp"
+            android:title="@string/titles_ascending" />
+
+        <RadioButton
+            android:id="@+id/sortTitleDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titles_descending"
+            android:textSize="24sp"
+            android:title="@string/titles_descending" />
+
+        <RadioButton
+            android:id="@+id/sortDatesAsc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/oldest_published"
+            android:textSize="24sp"
+            android:title="@string/oldest_published" />
+
+
+        <RadioButton
+            android:id="@+id/sortDatesDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/newest_published"
+            android:textSize="24sp"
+            android:title="@string/newest_published" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
